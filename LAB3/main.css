@@ -1,0 +1,119 @@
+/* GLOBAL */
+body {
+	margin: 0;
+	font-family: Arial;
+}
+
+/* WIDTH LIMIT (1020px condition) */
+.header-container,
+.nav,
+.main-container,
+.form-container {
+	max-width: 1020px;
+	margin: auto;
+}
+
+/* HEADER ANIMATION */
+.header-container {
+	overflow: hidden;
+}
+
+.header-text {
+	position: relative;
+	animation-name: slide;
+	animation-duration: 2s;
+}
+
+@keyframes slide {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: 0;
+	}
+}
+
+/* NAVIGATION (FLEX) */
+.nav {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	background: lightgray;
+	padding: 10px;
+}
+
+	.nav a {
+		text-decoration: none;
+		padding: 10px;
+	}
+
+/* MAIN CONTENT FLEX (nested) */
+.main-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.movie-card {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+}
+
+/* IMAGE HOVER EFFECT */
+.image-container {
+	position: relative;
+	overflow: hidden;
+}
+
+	.image-container img {
+		width: 100%;
+		transition: transform 2s;
+	}
+
+	.image-container:hover img {
+		transform: scale(1.5);
+	}
+
+/* TEXT OVER IMAGE */
+.overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	color: white;
+}
+
+.image-container:hover .overlay {
+	display: block;
+}
+
+/* FORM */
+.form-container {
+	padding: 20px;
+}
+
+input {
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 480px) {
+	.nav {
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+	.nav {
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 801px) {
+	.nav {
+		justify-content: space-around;
+	}
+}
