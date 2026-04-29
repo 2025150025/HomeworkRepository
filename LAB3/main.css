@@ -54,10 +54,24 @@ body {
 	flex-direction: column;
 }
 
+.section {
+	display: flex;
+	flex-direction: column;
+}
+
+.movie-row {
+	display: flex;
+	flex-direction: row;
+}
+
 .movie-card {
 	display: flex;
 	flex-direction: column;
-	margin: 20px;
+}
+
+.image-container {
+	display: flex;
+	flex-direction: column;
 }
 
 /* IMAGE HOVER EFFECT */
